@@ -13,34 +13,30 @@ import org.junit.Assert;
 
 class TestJunit1 {
 	WebDriver driver;
-	
 
 	@Test
 	void test() {
-		//fail("Not yet implemented");
-		
+		// fail("Not yet implemented");
+
 		driver.get("http://google.com");
 		driver.findElement(By.name("q")).sendKeys("i am groot");
 		driver.findElement(By.name("q")).submit();
 		driver.quit();
-		//assertEquals("Google",driver.getTitle());
+		// assertEquals("Google",driver.getTitle());
 		System.out.println("test case passed");
-		
-		
-		
+
 	}
+
 	@BeforeEach
 	void before() {
-		System.setProperty("webdriver.chrome.driver","D:\\drivers\\chromedriver.exe");
-		 driver=new ChromeDriver();
-		
+		System.setProperty("webdriver.chrome.driver", "D:\\drivers\\chromedriver.exe");
+		driver = new ChromeDriver();
+
 	}
+
 	@AfterEach
 	void after() {
-						driver.quit();
+		driver.quit();
 	}
-	
-	
-	
 
 }

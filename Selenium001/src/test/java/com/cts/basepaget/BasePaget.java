@@ -8,15 +8,16 @@ import org.openqa.selenium.support.PageFactory;
 public class BasePaget {
 	public static WebDriver driver;
 
-
 	@FindBy(linkText = "Register")
 	WebElement register;
+
 	public BasePaget() {
 		PageFactory.initElements(driver, this);
 
 	}
-		public void registrationpage() {
-			
-				register.click();
-		}
+
+	public void registrationpage() {
+
+		register.click();
+	}
 }

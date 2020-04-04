@@ -1,13 +1,18 @@
 
 package com.cts.basepaget;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+
+
 public class TestMainPage extends BasePaget {
+	final static Logger Logger=LogManager.getLogger(TestMainPage.class);
 	
 	TestMainPage tm;
 	Registrationpageclass rpc;
@@ -27,6 +32,8 @@ public class TestMainPage extends BasePaget {
 		System.setProperty("webdriver.chrome.driver", "D:\\drivers\\chromedriver.exe");
 		driver=new ChromeDriver();
 		driver.get("http://demowebshop.tricentis.com");
+		Logger.debug("Opening page is done");
+
 
 	}
 	@BeforeTest
@@ -74,6 +81,7 @@ public class TestMainPage extends BasePaget {
 	}
 	@AfterTest
 	public void close() {
+		Logger.error("Webpage is closed");
 		driver.quit();
 	}
 }
