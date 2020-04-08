@@ -18,54 +18,55 @@ import com.cts.utility.Excelllogin;
 import com.cts.utility.ScreenShot;
 
 public class TestMaintenancePage extends BasePage {
-	
-	final static Logger logger=LogManager.getLogger(TestLoginPage.class);
+
+	final static Logger logger = LogManager.getLogger(TestMaintenancePage.class);
 	WebDriver driver;
-	MaintanancePage mp;
-	Excelllogin data=new Excelllogin();
+	MaintanancePage MaintanancePage;
+	Excelllogin data = new Excelllogin();
 	Loginpage lpage = null;
-	
-	
-	@Parameters({"browser"})
-	@BeforeTest	
-	public void initDriver(String browser)
-	{
+
+	@Parameters({ "browser" })
+	@BeforeTest
+	public void initDriver(String browser) {
 		driver = launchApp(browser);
 		logger.info("browser opens");
-		mp=new MaintanancePage(driver);
-		 lpage=new Loginpage(driver);
-		
+		MaintanancePage = new MaintanancePage(driver);
+		lpage = new Loginpage(driver);
+
 	}
-	
-	@DataProvider(name="UserDetails")
-	public Object[][] getUsers() throws IOException
-	{
+
+	@DataProvider(name = "UserDetails")
+	public Object[][] getUsers() throws IOException {
 ////		return new Object[][] {
 ////			{"nagendra","nagendra201"},
 ////			{"Groot","Groot123"}
 ////		};
 		return data.getData();
 	}
-	
+
 	@Test(dataProvider = "UserDetails")
-	public void login(String username,String password) throws IOException
-	{		
+	public void login(String username, String password) throws IOException {
 
 		lpage.username(username);
 		lpage.password(password);
 		lpage.loginbtn();
 		logger.info("login sucessfully");
 	}
-	
+
 	@Test
 	public void testmaintenance() {
-		
-		mp.Maintenance();
+
+		MaintanancePage.Maintenance();
 		logger.info("maintenance page is opened successfully");
-		mp.verifypwd();
-		mp.verifybtn();
-		mp.textvacancy();
-		mp.searchbtn();
+		MaintanancePage.verifypwd();
+		logger.info("Password verified");
+		MaintanancePage.verifybtn();
+		logger.info("Verify button clicked");
+
+		MaintanancePage.textvacancy();
+		MaintanancePage.searchbtn();
+		logger.info("Search button clicked");
+
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -73,13 +74,13 @@ public class TestMaintenancePage extends BasePage {
 			e.printStackTrace();
 		}
 	}
+
 	@AfterTest
-	public void close() {	
-		ScreenShot util = new  ScreenShot(driver);
+	public void close() {
+		ScreenShot util = new ScreenShot(driver);
 		util.takeSnapShot("D:\\Groot1\\OrangeHRMDemo\\src\\test\\resources\\screenshots\\TestMaintenancePage.png");
 		logger.warn("browser closed");
-		  driver.close();				
+		driver.close();
 	}
-
 
 }

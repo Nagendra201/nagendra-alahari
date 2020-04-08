@@ -19,52 +19,48 @@ import com.cts.utility.Excelllogin;
 import com.cts.utility.ScreenShot;
 
 public class TestLogoutpage extends BasePage {
-	
-	final static Logger logger=LogManager.getLogger(TestLoginPage.class);
+
+	final static Logger logger = LogManager.getLogger(TestLogoutpage.class);
 	WebDriver driver;
-	LogoutPage logp;
-	Excelllogin data=new Excelllogin();
-	Loginpage lpage = null;
-	
-	
-	@Parameters({"browser"})
-	@BeforeTest	
-	public void initDriver(String browser)
-	{
+	LogoutPage LogoutPage;
+	Excelllogin data = new Excelllogin();
+	Loginpage Loginpage = null;
+
+	@Parameters({ "browser" })
+	@BeforeTest
+	public void initDriver(String browser) {
 		driver = launchApp(browser);
 		logger.info("browser opens ");
-		logp=new LogoutPage(driver);
-		 lpage=new Loginpage(driver);
-		
+		LogoutPage = new LogoutPage(driver);
+		Loginpage = new Loginpage(driver);
+
 	}
-	
-	@DataProvider(name="UserDetails")
-	public Object[][] getUsers() throws IOException
-	{
+
+	@DataProvider(name = "UserDetails")
+	public Object[][] getUsers() throws IOException {
 ////		return new Object[][] {
 ////			{"nagendra","nagendra201"},
 ////			{"Groot","Groot123"}
 ////		};
 		return data.getData();
 	}
-	
-	@Test(dataProvider = "UserDetails")
-	public void login(String username,String password) throws IOException
-	{		
 
-		lpage.username(username);
-		lpage.password(password);
-		lpage.loginbtn();
+	@Test(dataProvider = "UserDetails")
+	public void login(String username, String password) throws IOException {
+
+		Loginpage.username(username);
+		Loginpage.password(password);
+		Loginpage.loginbtn();
 		logger.info("login sucessfully ");
 	}
-	
+
 	@Test
 	public void testlogout() {
 
-		logp.welcomeadmin();
+		LogoutPage.welcomeadmin();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
-		logp.about();
+		LogoutPage.about();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
 		try {
@@ -73,15 +69,16 @@ public class TestLogoutpage extends BasePage {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		logp.logout();
+		LogoutPage.logout();
 		logger.warn("browser is logged out");
 	}
+
 	@AfterTest
-	public void close() {	
-		ScreenShot util = new  ScreenShot(driver);
+	public void close() {
+		ScreenShot util = new ScreenShot(driver);
 		util.takeSnapShot("D:\\Groot1\\OrangeHRMDemo\\src\\test\\resources\\screenshots.png");
 		logger.warn("browser closed");
-		  driver.close();				
+		driver.close();
 	}
-	
+
 }

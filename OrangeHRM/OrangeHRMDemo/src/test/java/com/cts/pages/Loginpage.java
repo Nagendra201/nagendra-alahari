@@ -23,7 +23,7 @@ public class Loginpage extends BasePage {
 		PageFactory.initElements(driver, this);
 
 	}
-
+//user login using valid username and password
 	public void username(String values) {
 		username.sendKeys(values);
 	}
@@ -32,7 +32,7 @@ public class Loginpage extends BasePage {
 
 		password.sendKeys(values);
 	}
-
+//user clicks on login button
 	public void loginbtn() {
 
 		loginbtn.click();

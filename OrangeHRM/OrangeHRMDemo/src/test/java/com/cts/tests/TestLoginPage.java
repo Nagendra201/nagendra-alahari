@@ -10,60 +10,51 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-
 import com.cts.baseclass.BasePage;
-import com.cts.pages.DashboardPage;
 import com.cts.pages.Loginpage;
 import com.cts.utility.Excelllogin;
 import com.cts.utility.ScreenShot;
 
+public class TestLoginPage extends BasePage {
 
+	final static Logger logger = LogManager.getLogger(TestLoginPage.class);
+	WebDriver driver = null;
+	Excelllogin data = new Excelllogin();
+	Loginpage Loginpage = null;
+	// AdminJobCategories ajc=new AdminJobCategories(driver);
 
-
-
-public class TestLoginPage extends BasePage{
-	
-	final static Logger logger=LogManager.getLogger(TestLoginPage.class);	
-	WebDriver driver= null;
-	Excelllogin data=new Excelllogin();
-	Loginpage lpage = null;
-	//AdminJobCategories ajc=new AdminJobCategories(driver);
-	
-	@Parameters({"browser"})
-	@BeforeTest	
-	public void initDriver(String browser)
-	{
+	@Parameters({ "browser" })
+	@BeforeTest
+	public void initDriver(String browser) {
 		driver = launchApp(browser);
 		logger.info("browser opens");
-		lpage=new Loginpage(driver);
-		
+		Loginpage = new Loginpage(driver);
+
 	}
-	
-	@DataProvider(name="UserDetails")
-	public Object[][] getUsers() throws IOException
-	{
+
+	@DataProvider(name = "UserDetails")
+	public Object[][] getUsers() throws IOException {
 ////		return new Object[][] {
 ////			{"nagendra","nagendra201"},
 ////			{"Groot","Groot123"}
 ////		};
 		return data.getData();
 	}
-	
-	@Test(dataProvider = "UserDetails")
-	public void login(String username,String password) throws IOException
-	{		
 
-		lpage.username(username);
-		lpage.password(password);
-		lpage.loginbtn();
+	@Test(dataProvider = "UserDetails")
+	public void login(String username, String password) throws IOException {
+
+		Loginpage.username(username);
+		Loginpage.password(password);
+		Loginpage.loginbtn();
 		logger.error("login successfully");
 	}
+
 	@AfterTest
-	public void close() {	
-		 ScreenShot util = new  ScreenShot(driver);
+	public void close() {
+		ScreenShot util = new ScreenShot(driver);
 		util.takeSnapShot("D:\\Groot1\\OrangeHRMDemo\\src\\test\\resources\\screenshots\\TestLoginPage.png");
-			logger.warn("browser is closed");
-		  driver.close();				
+		logger.warn("browser is closed");
+		driver.close();
 	}
 }
-

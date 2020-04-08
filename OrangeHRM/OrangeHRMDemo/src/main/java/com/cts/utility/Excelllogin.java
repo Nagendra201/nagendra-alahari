@@ -10,7 +10,7 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class Excelllogin {
-
+//excel sheet data driven for TDD.
 	public Object[][] getData() throws IOException {
 		Object[][] testData = null;
 		// Opening the Excel File
@@ -38,6 +38,7 @@ public class Excelllogin {
 
 		return testData;
 	}
+//excel sheet data driven for cucumber.	
 
 //To read and return username
 	public String excel_username(int a) throws IOException {

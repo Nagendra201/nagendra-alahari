@@ -1,24 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="17" passed="17">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="45276" started-at="2020-04-04T08:40:22Z" finished-at="2020-04-04T08:41:08Z">
+  <suite name="Suite" duration-ms="294555" started-at="2020-04-07T03:42:58Z" finished-at="2020-04-07T03:47:52Z">
     <groups>
     </groups>
-    <test name="chrome-test" duration-ms="45276" started-at="2020-04-04T08:40:22Z" finished-at="2020-04-04T08:41:08Z">
-      <class name="com.cts.tests.TestDashboard">
-        <test-method status="PASS" signature="initDriver(java.lang.String)[pri:0, instance:com.cts.tests.TestDashboard@689604d9]" name="initDriver" is-config="true" duration-ms="20836" started-at="2020-04-04T08:40:22Z" finished-at="2020-04-04T08:40:43Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:com.cts.tests.TestDashboard@689604d9]" name="login" duration-ms="2607" started-at="2020-04-04T08:40:47Z" data-provider="UserDetails" finished-at="2020-04-04T08:40:49Z">
+    <test name="chrome-test" duration-ms="294555" started-at="2020-04-07T03:42:58Z" finished-at="2020-04-07T03:47:52Z">
+      <class name="com.cts.tests.TestLoginPage">
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:com.cts.tests.TestLoginPage@313ac989]" name="login" duration-ms="7173" started-at="2020-04-07T03:45:52Z" data-provider="UserDetails" finished-at="2020-04-07T03:45:59Z">
           <params>
             <param index="0">
               <value>
@@ -34,7 +23,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:com.cts.tests.TestDashboard@689604d9]" name="login" duration-ms="5812" started-at="2020-04-04T08:40:50Z" data-provider="UserDetails" finished-at="2020-04-04T08:40:56Z">
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:com.cts.tests.TestLoginPage@313ac989]" name="login" duration-ms="5925" started-at="2020-04-07T03:46:01Z" data-provider="UserDetails" finished-at="2020-04-07T03:46:07Z">
           <params>
             <param index="0">
               <value>
@@ -50,15 +39,287 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="testleaves()[pri:0, instance:com.cts.tests.TestDashboard@689604d9]" name="testleaves" duration-ms="8533" started-at="2020-04-04T08:40:57Z" finished-at="2020-04-04T08:41:06Z">
+      </class> <!-- com.cts.tests.TestLoginPage -->
+      <class name="com.cts.tests.TestLogoutpage">
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:com.cts.tests.TestLogoutpage@31304f14]" name="login" duration-ms="2750" started-at="2020-04-07T03:47:28Z" data-provider="UserDetails" finished-at="2020-04-07T03:47:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Nagendra1998]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[nagendra0106]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:com.cts.tests.TestLogoutpage@31304f14]" name="login" duration-ms="6995" started-at="2020-04-07T03:47:31Z" data-provider="UserDetails" finished-at="2020-04-07T03:47:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="testlogout()[pri:0, instance:com.cts.tests.TestLogoutpage@31304f14]" name="testlogout" duration-ms="7852" started-at="2020-04-07T03:47:39Z" finished-at="2020-04-07T03:47:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testlogout -->
+      </class> <!-- com.cts.tests.TestLogoutpage -->
+      <class name="com.cts.tests.TestLeavesPage">
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:com.cts.tests.TestLeavesPage@2a65fe7c]" name="login" duration-ms="2970" started-at="2020-04-07T03:46:27Z" data-provider="UserDetails" finished-at="2020-04-07T03:46:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Nagendra1998]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[nagendra0106]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:com.cts.tests.TestLeavesPage@2a65fe7c]" name="login" duration-ms="3224" started-at="2020-04-07T03:46:31Z" data-provider="UserDetails" finished-at="2020-04-07T03:46:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="testleaves()[pri:0, instance:com.cts.tests.TestLeavesPage@2a65fe7c]" name="testleaves" duration-ms="14374" started-at="2020-04-07T03:46:34Z" finished-at="2020-04-07T03:46:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testleaves -->
-        <test-method status="PASS" signature="close()[pri:0, instance:com.cts.tests.TestDashboard@689604d9]" name="close" is-config="true" duration-ms="1364" started-at="2020-04-04T08:41:06Z" finished-at="2020-04-04T08:41:08Z">
+      </class> <!-- com.cts.tests.TestLeavesPage -->
+      <class name="com.cts.tests.TestDashboard">
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:com.cts.tests.TestDashboard@6302bbb1]" name="login" duration-ms="2861" started-at="2020-04-07T03:47:11Z" data-provider="UserDetails" finished-at="2020-04-07T03:47:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Nagendra1998]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[nagendra0106]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:com.cts.tests.TestDashboard@6302bbb1]" name="login" duration-ms="5231" started-at="2020-04-07T03:47:14Z" data-provider="UserDetails" finished-at="2020-04-07T03:47:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="testleaves()[pri:0, instance:com.cts.tests.TestDashboard@6302bbb1]" name="testleaves" duration-ms="7637" started-at="2020-04-07T03:47:20Z" finished-at="2020-04-07T03:47:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testleaves -->
+      </class> <!-- com.cts.tests.TestDashboard -->
+      <class name="com.cts.tests.TestAdminJobCategories">
+        <test-method status="PASS" signature="initDriver(java.lang.String)[pri:0, instance:com.cts.tests.TestAdminJobCategories@4562e04d]" name="initDriver" is-config="true" duration-ms="22647" started-at="2020-04-07T03:42:58Z" finished-at="2020-04-07T03:43:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method status="PASS" signature="initDriver(java.lang.String)[pri:0, instance:com.cts.tests.TestDashboard@6302bbb1]" name="initDriver" is-config="true" duration-ms="18084" started-at="2020-04-07T03:43:21Z" finished-at="2020-04-07T03:43:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method status="PASS" signature="initDriver(java.lang.String)[pri:0, instance:com.cts.tests.TestLeavesPage@2a65fe7c]" name="initDriver" is-config="true" duration-ms="25091" started-at="2020-04-07T03:43:39Z" finished-at="2020-04-07T03:44:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method status="PASS" signature="initDriver(java.lang.String)[pri:0, instance:com.cts.tests.TestLoginPage@313ac989]" name="initDriver" is-config="true" duration-ms="30255" started-at="2020-04-07T03:44:04Z" finished-at="2020-04-07T03:44:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method status="PASS" signature="initDriver(java.lang.String)[pri:0, instance:com.cts.tests.TestLogoutpage@31304f14]" name="initDriver" is-config="true" duration-ms="24904" started-at="2020-04-07T03:44:34Z" finished-at="2020-04-07T03:44:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method status="PASS" signature="initDriver(java.lang.String)[pri:0, instance:com.cts.tests.TestMaintenancePage@4135c3b]" name="initDriver" is-config="true" duration-ms="39265" started-at="2020-04-07T03:44:59Z" finished-at="2020-04-07T03:45:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:com.cts.tests.TestAdminJobCategories@4562e04d]" name="login" duration-ms="3076" started-at="2020-04-07T03:46:08Z" data-provider="UserDetails" finished-at="2020-04-07T03:46:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Nagendra1998]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[nagendra0106]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:com.cts.tests.TestAdminJobCategories@4562e04d]" name="login" duration-ms="5480" started-at="2020-04-07T03:46:11Z" data-provider="UserDetails" finished-at="2020-04-07T03:46:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="testadmin()[pri:0, instance:com.cts.tests.TestAdminJobCategories@4562e04d]" name="testadmin" duration-ms="8998" started-at="2020-04-07T03:46:17Z" finished-at="2020-04-07T03:46:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testadmin -->
+        <test-method status="PASS" signature="close()[pri:0, instance:com.cts.tests.TestAdminJobCategories@4562e04d]" name="close" is-config="true" duration-ms="1248" started-at="2020-04-07T03:47:47Z" finished-at="2020-04-07T03:47:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
-      </class> <!-- com.cts.tests.TestDashboard -->
+        <test-method status="PASS" signature="close()[pri:0, instance:com.cts.tests.TestDashboard@6302bbb1]" name="close" is-config="true" duration-ms="878" started-at="2020-04-07T03:47:48Z" finished-at="2020-04-07T03:47:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method status="PASS" signature="close()[pri:0, instance:com.cts.tests.TestLeavesPage@2a65fe7c]" name="close" is-config="true" duration-ms="1077" started-at="2020-04-07T03:47:49Z" finished-at="2020-04-07T03:47:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method status="PASS" signature="close()[pri:0, instance:com.cts.tests.TestLoginPage@313ac989]" name="close" is-config="true" duration-ms="939" started-at="2020-04-07T03:47:50Z" finished-at="2020-04-07T03:47:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method status="PASS" signature="close()[pri:0, instance:com.cts.tests.TestLogoutpage@31304f14]" name="close" is-config="true" duration-ms="707" started-at="2020-04-07T03:47:51Z" finished-at="2020-04-07T03:47:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method status="PASS" signature="close()[pri:0, instance:com.cts.tests.TestMaintenancePage@4135c3b]" name="close" is-config="true" duration-ms="580" started-at="2020-04-07T03:47:52Z" finished-at="2020-04-07T03:47:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- com.cts.tests.TestAdminJobCategories -->
+      <class name="com.cts.tests.TestMaintenancePage">
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:com.cts.tests.TestMaintenancePage@4135c3b]" name="login" duration-ms="2874" started-at="2020-04-07T03:46:50Z" data-provider="UserDetails" finished-at="2020-04-07T03:46:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Nagendra1998]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[nagendra0106]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:com.cts.tests.TestMaintenancePage@4135c3b]" name="login" duration-ms="3757" started-at="2020-04-07T03:46:53Z" data-provider="UserDetails" finished-at="2020-04-07T03:46:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="testmaintenance()[pri:0, instance:com.cts.tests.TestMaintenancePage@4135c3b]" name="testmaintenance" duration-ms="10246" started-at="2020-04-07T03:47:00Z" finished-at="2020-04-07T03:47:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testmaintenance -->
+      </class> <!-- com.cts.tests.TestMaintenancePage -->
     </test> <!-- chrome-test -->
   </suite> <!-- Suite -->
 </testng-results>

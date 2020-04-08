@@ -87,44 +87,64 @@ formatter.feature({
   ]
 });
 formatter.scenarioOutline({
-  "line": 23,
-  "name": "Login in the OrangeHRM Website",
+  "line": 47,
+  "name": "TC01_03Login in the OrangeHRM Website",
   "description": "",
-  "id": "orangehrm-website;login-in-the-orangehrm-website",
+  "id": "orangehrm-website;tc01-03login-in-the-orangehrm-website",
   "type": "scenario_outline",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "line": 22,
-      "name": "@TC01_01"
+      "line": 46,
+      "name": "@TC01_03"
     }
   ]
 });
 formatter.step({
-  "line": 24,
-  "name": "the user launch the chrome application",
+  "line": 48,
+  "name": "TC01_03the user launch the chrome application",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 25,
-  "name": "the user open the OrangeHRM Home page",
+  "line": 49,
+  "name": "TC01_03the user open the OrangeHRM Home page",
   "keyword": "When "
 });
 formatter.step({
-  "line": 26,
-  "name": "the user login using \u003cusername\u003e and \u003cpassword\u003e",
+  "line": 50,
+  "name": "TC01_03the user login using \u003cusername\u003e and \u003cpassword\u003e",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 27,
-  "name": "click on the login button user nagivate to the next page",
+  "line": 51,
+  "name": "TC01_03click on the login button user nagivate to the next page",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 52,
+  "name": "TC01_03Using actions move to leave types from leaves then move to next page",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 53,
+  "name": "TC01_03click on Add",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 54,
+  "name": "TC01_03wrote the leave type",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 55,
+  "name": "TC01_03click on save the user moves to next page",
   "keyword": "Then "
 });
 formatter.examples({
-  "line": 31,
+  "line": 56,
   "name": "",
   "description": "",
-  "id": "orangehrm-website;login-in-the-orangehrm-website;",
+  "id": "orangehrm-website;tc01-03login-in-the-orangehrm-website;",
   "rows": [
     {
       "cells": [
@@ -132,8 +152,8 @@ formatter.examples({
         "password",
         "status"
       ],
-      "line": 32,
-      "id": "orangehrm-website;login-in-the-orangehrm-website;;1"
+      "line": 57,
+      "id": "orangehrm-website;tc01-03login-in-the-orangehrm-website;;1"
     },
     {
       "cells": [
@@ -141,23 +161,23 @@ formatter.examples({
         "5",
         "success"
       ],
-      "line": 33,
-      "id": "orangehrm-website;login-in-the-orangehrm-website;;2"
+      "line": 58,
+      "id": "orangehrm-website;tc01-03login-in-the-orangehrm-website;;2"
     }
   ],
   "keyword": "Examples"
 });
 formatter.scenario({
-  "line": 33,
-  "name": "Login in the OrangeHRM Website",
+  "line": 58,
+  "name": "TC01_03Login in the OrangeHRM Website",
   "description": "",
-  "id": "orangehrm-website;login-in-the-orangehrm-website;;2",
+  "id": "orangehrm-website;tc01-03login-in-the-orangehrm-website;;2",
   "type": "scenario",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "line": 22,
-      "name": "@TC01_01"
+      "line": 46,
+      "name": "@TC01_03"
     },
     {
       "line": 19,
@@ -166,18 +186,18 @@ formatter.scenario({
   ]
 });
 formatter.step({
-  "line": 24,
-  "name": "the user launch the chrome application",
+  "line": 48,
+  "name": "TC01_03the user launch the chrome application",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 25,
-  "name": "the user open the OrangeHRM Home page",
+  "line": 49,
+  "name": "TC01_03the user open the OrangeHRM Home page",
   "keyword": "When "
 });
 formatter.step({
-  "line": 26,
-  "name": "the user login using name1 and 5",
+  "line": 50,
+  "name": "TC01_03the user login using name1 and 5",
   "matchedColumns": [
     0,
     1
@@ -185,46 +205,94 @@ formatter.step({
   "keyword": "Then "
 });
 formatter.step({
-  "line": 27,
-  "name": "click on the login button user nagivate to the next page",
+  "line": 51,
+  "name": "TC01_03click on the login button user nagivate to the next page",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 52,
+  "name": "TC01_03Using actions move to leave types from leaves then move to next page",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 53,
+  "name": "TC01_03click on Add",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 54,
+  "name": "TC01_03wrote the leave type",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 55,
+  "name": "TC01_03click on save the user moves to next page",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "SDLoginPage.the_user_launch_the_chrome_application()"
+  "location": "SDLeavesPage.tc0103the_user_launch_the_chrome_application()"
 });
 formatter.result({
-  "duration": 26447048800,
+  "duration": 20224249400,
   "status": "passed"
 });
 formatter.match({
-  "location": "SDLoginPage.the_user_open_the_orangehrm_home_page()"
+  "location": "SDLeavesPage.tc0103the_user_open_the_orangehrm_home_page()"
 });
 formatter.result({
-  "duration": 818119600,
+  "duration": 815641300,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
       "val": "name1",
-      "offset": 21
+      "offset": 28
     },
     {
       "val": "5",
-      "offset": 31
+      "offset": 38
     }
   ],
-  "location": "SDLoginPage.the_user_login_using_username_and_password(String,String)"
+  "location": "SDLeavesPage.tc0103the_user_login_using_and(String,String)"
 });
 formatter.result({
-  "duration": 7782518600,
+  "duration": 4104474700,
   "status": "passed"
 });
 formatter.match({
-  "location": "SDLoginPage.click_on_the_login_button_user_nagivate_to_the_next_pag()"
+  "location": "SDLeavesPage.tc0103click_on_the_login_button_user_nagivate_to_the_next_page()"
 });
 formatter.result({
-  "duration": 11325112000,
+  "duration": 5996228600,
+  "status": "passed"
+});
+formatter.match({
+  "location": "SDLeavesPage.tc0103using_actions_move_to_leave_types_from_leaves_then_move_to_next_page()"
+});
+formatter.result({
+  "duration": 2405241400,
+  "status": "passed"
+});
+formatter.match({
+  "location": "SDLeavesPage.tc0103click_on_add()"
+});
+formatter.result({
+  "duration": 1402999600,
+  "status": "passed"
+});
+formatter.match({
+  "location": "SDLeavesPage.tc0103wrote_the_leave_type()"
+});
+formatter.result({
+  "duration": 1392767500,
+  "status": "passed"
+});
+formatter.match({
+  "location": "SDLeavesPage.tc0103click_on_save_the_user_moves_to_next_page()"
+});
+formatter.result({
+  "duration": 3232979300,
   "status": "passed"
 });
 });

@@ -15,25 +15,30 @@ public class LogoutPage {
 	WebElement about;
 	@FindBy(xpath = "//a[contains(text(),'Logout')]")
 	WebElement logout;
-		public LogoutPage(WebDriver driver) {
-				PageFactory.initElements(driver, this);
-				this.driver=driver;
+
+	public LogoutPage(WebDriver driver) {
+		PageFactory.initElements(driver, this);
+		this.driver = driver;
 	}
-			public void welcomeadmin() {
-				
-				welcomeadmin.click();
-			}
-		public void about() {
-			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	// user clicks welcome button
 
-			about.click();
-			}
-		public void logout() {
-			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	public void welcomeadmin() {
 
-			
-			logout.click();
-		}
-	
+		welcomeadmin.click();
+	}
+
+//user clicks about butoon
+	public void about() {
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+		about.click();
+	}
+
+//user clicks logout button
+	public void logout() {
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+		logout.click();
+	}
 
 }

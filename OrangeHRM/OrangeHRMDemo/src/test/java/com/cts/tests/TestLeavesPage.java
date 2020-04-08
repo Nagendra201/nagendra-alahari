@@ -17,54 +17,50 @@ import com.cts.utility.Excelllogin;
 import com.cts.utility.ScreenShot;
 
 public class TestLeavesPage extends BasePage {
-	
-	final static Logger logger=LogManager.getLogger(TestLoginPage.class);
+
+	final static Logger logger = LogManager.getLogger(TestLeavesPage.class);
 	WebDriver driver;
-	LeavesPage lp;
-	Excelllogin data=new Excelllogin();
-	Loginpage lpage = null;
-	
-	
-	@Parameters({"browser"})
-	@BeforeTest	
-	public void initDriver(String browser)
-	{
+	LeavesPage LeavesPage;
+	Excelllogin data = new Excelllogin();
+	Loginpage Loginpage = null;
+
+	@Parameters({ "browser" })
+	@BeforeTest
+	public void initDriver(String browser) {
 		driver = launchApp(browser);
 		logger.info("browser openes");
-		lp=new LeavesPage(driver);
-		 lpage=new Loginpage(driver);
-		
+		LeavesPage = new LeavesPage(driver);
+		Loginpage = new Loginpage(driver);
+
 	}
-	
-	@DataProvider(name="UserDetails")
-	public Object[][] getUsers() throws IOException
-	{
+
+	@DataProvider(name = "UserDetails")
+	public Object[][] getUsers() throws IOException {
 ////		return new Object[][] {
 ////			{"nagendra","nagendra201"},
 ////			{"Groot","Groot123"}
 ////		};
 		return data.getData();
 	}
-	
-	@Test(dataProvider = "UserDetails")
-	public void login(String username,String password) throws IOException
-	{		
 
-		lpage.username(username);
-		lpage.password(password);
-		lpage.loginbtn();
+	@Test(dataProvider = "UserDetails")
+	public void login(String username, String password) throws IOException {
+
+		Loginpage.username(username);
+		Loginpage.password(password);
+		Loginpage.loginbtn();
 		logger.error("login sucessfully");
 	}
-	
+
 	@Test
 	public void testleaves() {
-		
-		lp.leave();
+
+		LeavesPage.leave();
 		logger.info("leavepage opens sucessfully");
-		//lp.paternity();
-		lp.add();
-		lp.textleave();
-		lp.savebtn();
+		// lp.paternity();
+		LeavesPage.add();
+		LeavesPage.textleave();
+		LeavesPage.savebtn();
 		logger.info("saved sucessfully");
 
 		try {
@@ -74,12 +70,13 @@ public class TestLeavesPage extends BasePage {
 			e.printStackTrace();
 		}
 	}
+
 	@AfterTest
 	public void close() {
-		ScreenShot util = new  ScreenShot(driver);
+		ScreenShot util = new ScreenShot(driver);
 		util.takeSnapShot("D:\\Groot1\\OrangeHRMDemo\\src\\test\\resources\\screenshots\\TestLeavesPage.png");
 		logger.error("browser closed");
-		  driver.close();				
+		driver.close();
 	}
 
 }

@@ -9,10 +9,10 @@
 		<parameter name="browser" value="chrome" />
 		<classes>
 
-			<!-- <class name="com.cts.tests.TestLoginPage"/> <class name="com.cts.tests.TestAdminJobCategories"/> 
-				<class name="com.cts.tests.TestLeavesPage"/> <class name="com.cts.tests.TestMaintenancePage"/> -->
+			<class name="com.cts.tests.TestLoginPage"/> <class name="com.cts.tests.TestAdminJobCategories"/> 
+				<class name="com.cts.tests.TestLeavesPage"/> <class name="com.cts.tests.TestMaintenancePage"/> 
 			<class name="com.cts.tests.TestDashboard" />
-			<!-- <class name="com.cts.tests.TestLogoutpage"/> -->
+			 <class name="com.cts.tests.TestLogoutpage"/>
 
 		</classes>
 	</test>

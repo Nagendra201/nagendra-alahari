@@ -19,19 +19,19 @@ import com.cts.utility.ScreenShot;
 
 public class TestDashboard extends BasePage {
 
-	final static Logger logger = LogManager.getLogger(TestLoginPage.class);
+	final static Logger logger = LogManager.getLogger(TestDashboard.class);
 	WebDriver driver;
-	DashboardPage dp;
+	DashboardPage DashboardPage;
 	Excelllogin data = new Excelllogin();
-	Loginpage lpage = null;
+	Loginpage Loginpage = null;
 
 	@Parameters({ "browser" })
 	@BeforeTest
 	public void initDriver(String browser) {
 		driver = launchApp(browser);
 		logger.info("browser opens");
-		dp = new DashboardPage(driver);
-		lpage = new Loginpage(driver);
+		DashboardPage = new DashboardPage(driver);
+		Loginpage = new Loginpage(driver);
 
 	}
 
@@ -47,19 +47,19 @@ public class TestDashboard extends BasePage {
 	@Test(dataProvider = "UserDetails")
 	public void login(String username, String password) throws IOException {
 
-		lpage.username(username);
-		lpage.password(password);
-		lpage.loginbtn();
-		logger.error("login successfully");
+		Loginpage.username(username);
+		Loginpage.password(password);
+		Loginpage.loginbtn();
+		logger.info("login successfully");
 	}
 
 	@Test
 	public void testleaves() {
 
-		dp.dashboard();
-		dp.timesheet();
-		dp.employeename();
-		dp.viewbtn();
+		DashboardPage.dashboard();
+		DashboardPage.timesheet();
+		DashboardPage.employeename();
+		DashboardPage.viewbtn();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -72,7 +72,7 @@ public class TestDashboard extends BasePage {
 	public void close() {
 		ScreenShot util = new ScreenShot(driver);
 		util.takeSnapShot("D:\\Groot1\\OrangeHRMDemo\\src\\test\\resources\\screenshots\\TestDashboard.png");
-		logger.error("driver is closing");
+		logger.error("browser is closing");
 		driver.close();
 	}
 

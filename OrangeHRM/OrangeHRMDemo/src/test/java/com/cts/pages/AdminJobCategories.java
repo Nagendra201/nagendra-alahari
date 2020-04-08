@@ -25,7 +25,7 @@ public class AdminJobCategories extends BasePage {
 
 	}
 	public void admin() {
-		
+	//on mouse move to admin then goto job then click job category.	
 		Actions action = new Actions(driver);
 		action.moveToElement(admin).perform();
 		action.moveToElement(job).perform();

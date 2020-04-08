@@ -30,6 +30,7 @@ public class LeavesPage extends BasePage {
 		this.driver =driver;
 
 	}
+	//on mouse move to leave then configure then click on leave types 
 	public void leave() {
 		
 		Actions action = new Actions(driver);
@@ -39,19 +40,22 @@ public class LeavesPage extends BasePage {
 		Actions seriesofactions = action.moveToElement(leavetypes).click();
 		seriesofactions.build().perform();
 	}
+	//user clicks paternity #commented method
 	public void paternity() {
 		
 		paternity.click();
 		}
+	//user clicks add
 		public void add() {
 		
 				add.click();
 		}
-		
+	 //user clicks save button
 		public void savebtn() {
 			savebtn.click();
 			
 		}
+		//user writes leave text
 		public void textleave() {
 			textleave.sendKeys("my ankel was twisted, so need a mdical leave");
 			
