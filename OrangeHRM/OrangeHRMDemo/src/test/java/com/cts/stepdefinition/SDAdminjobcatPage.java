@@ -69,7 +69,7 @@ public class SDAdminjobcatPage extends BasePage {
 	public void tc0102click_on_professionals_check_box() throws Throwable {
 		AdminJobCategories.professionals();
 		ScreenShot util = new ScreenShot(driver);
-		util.takeSnapShot("D:\\Groot1\\OrangeHRMDemo\\src\\test\\resources\\screenshots\\AdminJobCategories.png");
+		util.takeSnapShot("C:\\Users\\Raja\\git\\nagendra-alahari\\OrangeHRM\\OrangeHRMDemo\\src\\test\\resources\\screenshots(BDD)\\SDAdminjobcatPage.png");
 		logger.warn("browser is closed");
 		driver.close();
 	}

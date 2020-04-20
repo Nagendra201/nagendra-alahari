@@ -77,7 +77,7 @@ public class SDMaintenancePage extends BasePage {
 	public void tc0105click_on_search_button() throws Throwable {
 		MaintanancePage.searchbtn();
 		ScreenShot util = new ScreenShot(driver);
-		util.takeSnapShot("D:\\Groot1\\OrangeHRMDemo\\src\\test\\resources\\screenshots\\SDMaintenancePage.png");
+		util.takeSnapShot("C:\\Users\\Raja\\git\\nagendra-alahari\\OrangeHRM\\OrangeHRMDemo\\src\\test\\resources\\screenshots(BDD)\\SDMaintenancePage.png");
 		logger.warn("browser closed");
 		driver.close();
 	}

@@ -71,7 +71,7 @@ public class TestDashboard extends BasePage {
 	@AfterTest
 	public void close() {
 		ScreenShot util = new ScreenShot(driver);
-		util.takeSnapShot("D:\\Groot1\\OrangeHRMDemo\\src\\test\\resources\\screenshots\\TestDashboard.png");
+		util.takeSnapShot("C:\\Users\\Raja\\git\\nagendra-alahari\\OrangeHRM\\OrangeHRMDemo\\src\\test\\resources\\screenshots(TDD)\\TestDashboard.png");
 		logger.error("browser is closing");
 		driver.close();
 	}

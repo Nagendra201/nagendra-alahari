@@ -74,7 +74,7 @@ public class SDLeavesPage extends BasePage {
 		LeavesPage.savebtn();
 		logger.info("saved sucessfully");
 		ScreenShot util = new ScreenShot(driver);
-		util.takeSnapShot("D:\\Groot1\\OrangeHRMDemo\\src\\test\\resources\\screenshots\\SDLeavesPage.png");
+		util.takeSnapShot("C:\\Users\\Raja\\git\\nagendra-alahari\\OrangeHRM\\OrangeHRMDemo\\src\\test\\resources\\screenshots(BDD)\\SDLeavesPage.png");
 		logger.warn("browser closed");
 		driver.close();
 	}

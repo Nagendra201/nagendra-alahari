@@ -22,6 +22,7 @@ public class SDDashBoardPage extends BasePage {
 	Excelllogin data = new Excelllogin();
 	CucumbLoginPage CucumbLoginPage = null;
 	DashboardPage DashboardPage;
+	ScreenShot util;
 
 	@Given("^TC01_04the user launch the chrome application$")
 	public void tc0104the_user_launch_the_chrome_application() throws Throwable {
@@ -70,8 +71,8 @@ public class SDDashBoardPage extends BasePage {
 	@Then("^TC01_04click on view the user moves to next page$")
 	public void tc0104click_on_view_the_user_moves_to_next_page() throws Throwable {
 		DashboardPage.viewbtn();
-		ScreenShot util = new ScreenShot(driver);
-		util.takeSnapShot("D:\\Groot1\\OrangeHRMDemo\\src\\test\\resources\\screenshots\\SDDashBoardPage.png");
+		util = new ScreenShot(driver);
+		util.takeSnapShot("C:\\Users\\Raja\\git\\nagendra-alahari\\OrangeHRM\\OrangeHRMDemo\\src\\test\\resources\\screenshots(BDD)\\SDDashBoardPage.png");
 		logger.warn("driver is closing");
 		driver.close();
 	}

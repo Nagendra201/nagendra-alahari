@@ -80,7 +80,7 @@ public class SDLogoutPage extends BasePage {
 		LogoutPage.logout();
 		logger.warn("browser is logged out");
 		ScreenShot util = new ScreenShot(driver);
-		util.takeSnapShot("D:\\Groot1\\OrangeHRMDemo\\src\\test\\resources\\SDLogoutPage.png");
+		util.takeSnapShot("C:\\Users\\Raja\\git\\nagendra-alahari\\OrangeHRM\\OrangeHRMDemo\\src\\test\\resources\\screenshots(BDD)\\SDLogoutPage.png");
 		logger.warn("browser closed");
 		driver.close();
 	}

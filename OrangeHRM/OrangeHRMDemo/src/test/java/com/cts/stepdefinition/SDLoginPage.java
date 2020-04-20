@@ -57,7 +57,7 @@ public class SDLoginPage extends BasePage {
 	public void click_on_the_login_button_user_nagivate_to_the_next_pag() throws Throwable {
 		CucumbLoginPage.loginbtn();
 		ScreenShot util = new ScreenShot(driver);
-		util.takeSnapShot("D:\\Groot1\\OrangeHRMDemo\\src\\test\\resources\\screenshots\\SDLoginPage.png");
+		util.takeSnapShot("C:\\Users\\Raja\\git\\nagendra-alahari\\OrangeHRM\\OrangeHRMDemo\\src\\test\\resources\\screenshots(BDD)\\SDLoginPage.png");
 		logger.error("browser is closed");
 		driver.close();
 

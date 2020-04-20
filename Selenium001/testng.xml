@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.cts.basepaget.TestMainPage"/>
+      <class name="com.bmw.Login"/>
      <!-- <class name="com.cts.demoappt.TestDemoAUT"/>
        <class name="com.cts.junit.TestSpicejet2"/>
       <class name="com.cts.junit.TestLocalApp1"/>

@@ -74,7 +74,7 @@ public class TestLeavesPage extends BasePage {
 	@AfterTest
 	public void close() {
 		ScreenShot util = new ScreenShot(driver);
-		util.takeSnapShot("D:\\Groot1\\OrangeHRMDemo\\src\\test\\resources\\screenshots\\TestLeavesPage.png");
+		util.takeSnapShot("C:\\Users\\Raja\\git\\nagendra-alahari\\OrangeHRM\\OrangeHRMDemo\\src\\test\\resources\\screenshots(TDD)\\TestLeavesPage.png");
 		logger.error("browser closed");
 		driver.close();
 	}

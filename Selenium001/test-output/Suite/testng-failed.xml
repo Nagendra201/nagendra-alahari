@@ -3,14 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.cts.basepaget.TestMainPage">
+      <class name="com.bmw.Login">
         <methods>
-          <include name="close"/>
-          <include name="launchbrowser"/>
-          <include name="testreg"/>
-          <include name="launchAPP"/>
+          <include name="aftertest"/>
+          <include name="bmw"/>
+          <include name="initdriver"/>
         </methods>
-      </class> <!-- com.cts.basepaget.TestMainPage -->
+      </class> <!-- com.bmw.Login -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -20,20 +20,18 @@ public class LogoutPage {
 		PageFactory.initElements(driver, this);
 		this.driver = driver;
 	}
-	// user clicks welcome button
+	//user clicks welcome button
 
 	public void welcomeadmin() {
 
 		welcomeadmin.click();
 	}
-
 //user clicks about butoon
 	public void about() {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
 		about.click();
 	}
-
 //user clicks logout button
 	public void logout() {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
